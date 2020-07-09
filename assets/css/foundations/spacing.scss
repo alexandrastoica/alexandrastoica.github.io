@@ -1,0 +1,161 @@
+body,
+dl,
+dd,
+.article--image p {
+  margin: 0;
+}
+
+dd {
+  margin: $spacing-s 0;
+}
+
+dt {
+  padding-top: $spacing-m;
+}
+
+ul:not(.article-cards) {
+  padding: 0 $spacing-s;
+}
+
+li {
+  padding-bottom: $spacing-xxs;
+}
+
+app-home {
+  padding: $spacing-l;
+
+  @media screen and (max-width: $tablet) {
+    padding: $spacing-m;
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: $spacing-m $spacing-xs;
+  }
+}
+
+header {
+  padding: $spacing-xl 0;
+
+  @media screen and (max-width: $tablet) {
+    padding: $spacing-l 0;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: $spacing-m 0;
+  }
+}
+
+header,
+.wrapper {
+  margin: 0 auto;
+  max-width: $body-width;
+}
+
+.wrapper-article {
+  padding: 0 $spacing-xl;
+
+  @media screen and (max-width: 1015px) {
+    padding: 0;
+  }
+}
+
+aside {
+  box-sizing: border-box;
+  flex: 0 0 360px;
+  padding: 0 $spacing-m 0 0;
+
+  @media screen and (max-width: 1015px) {
+    flex: 100%;
+    padding: $spacing-l;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: $spacing-m;
+  }
+}
+
+.article,
+.article-header {
+  margin: 0 auto;
+}
+
+.article {
+  padding: $spacing-xl $spacing-l;
+
+  @media screen and (max-width: 700px) {
+    padding: $spacing-m;
+  }
+}
+
+.article,
+.awards,
+.profile--body {
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.article > *,
+.profile--body,
+.awards {
+  max-width: $text-width;
+}
+
+.article video {
+  width: 100%;
+}
+
+.article h2,
+.article h3 {
+  margin: 56px 0 32px;
+}
+
+.article--label {
+  margin-bottom: $spacing-xs;
+  padding-top: 0;
+}
+
+.wrapper-article h1,
+.card h3 {
+  margin: 0;
+}
+
+.breadcrumb ul {
+  margin: 0 $spacing-xl;
+  padding: $spacing-m 0 $spacing-xs;
+
+  @media screen and (max-width: 1015px) {
+    margin: 0 $spacing-m;
+    padding: $spacing-s 0 $spacing-xs;
+  }
+}
+
+.wrapper-article > *,
+section+section {
+  padding-top: $spacing-xl;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: $spacing-l;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding-top: $spacing-m;
+  }
+}
+
+.wrapper-article > *,
+section:last-child {
+  padding-bottom: $spacing-xl;
+
+  @media screen and (max-width: $tablet) {
+    padding-bottom: $spacing-l;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding-bottom: $spacing-m;
+  }
+}
+
+footer p {
+  margin: 0;
+}
+

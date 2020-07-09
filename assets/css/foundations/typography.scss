@@ -1,0 +1,112 @@
+html {
+  font-size: 16px;
+}
+
+body,
+p,
+li {
+  font: 400 1.125rem/2rem $body-font;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.055rem;
+}
+
+h1 {
+  font: 700 3.2rem/4rem $headline-font;
+}
+
+h2 {
+  font: 500 2.5rem/3rem $headline-font;
+}
+
+h3 {
+  font: 500 2rem/2.5rem $headline-font;
+}
+
+h4,
+.article .subtitle {
+  font: 400 1.5rem/2rem $headline-font;
+}
+
+.material-icons {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pill-button a {
+  color: #000;
+  text-decoration: none;
+}
+
+.breadcrumb li:last-child {
+  font: 600 11px/11px $body-font;
+}
+
+.card--label,
+.pill,
+dt {
+  font: 300 0.875rem/1.125rem $body-font;
+}
+
+.card--label,
+dt {
+  font-weight: 600;
+}
+
+.breadcrumb li:last-child,
+.card--label,
+dt {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+figcaption,
+.card p,
+dd {
+  font: 400 1rem/1.5rem $body-font;
+}
+
+footer p {
+  font: 400 0.875rem/1.5rem $body-font;
+}
+
+.breadcrumb a {
+  font: 700 1.5rem/1.6875rem $body-font;
+  text-decoration: none;
+}
+
+@media screen and (max-width: $tablet) {
+  h1 {
+    font: 600 2.5rem/3rem $headline-font;
+  }
+
+  h2 {
+    font: 500 2rem/2.5rem $headline-font;
+  }
+
+  h3,
+  .article .subtitle {
+    font: 400 1.5rem/2rem $headline-font;
+  }
+
+  h4 {
+    font: 400 1.125rem/1.75rem $headline-font;
+  }
+
+  body,
+  p,
+  li {
+    font: 400 1rem/1.5rem $body-font;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  h1 {
+    font: 600 2rem/2.625rem $headline-font;
+  }
+
+  h2 {
+    font: 500 1.75rem/2.125rem $headline-font;
+  }
+}

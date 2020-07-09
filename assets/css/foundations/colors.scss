@@ -1,0 +1,59 @@
+body {
+  color: $gunmetal;
+}
+
+app-home {
+  background: $light-cyan;
+}
+
+a {
+  color: $bluetiful;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+.article {
+  background: $white;
+}
+
+.breadcrumb {
+  background: $unbleached-silk;
+}
+
+aside {
+  background: $unbleached-silk;
+}
+
+.card--corner {
+  background: linear-gradient(to bottom left, $light-cyan 50%, $oxford-blue 50%);
+}
+
+.article--corner {
+  background: linear-gradient(to top left, $oxford-blue 50%, $unbleached-silk 50%);
+}
+
+.wrapper-article {
+  background: linear-gradient(to right, $unbleached-silk, 50%, $white 50%);
+}
+
+.article .subtitle {
+  color: #42555d;
+}
+
+.article--label span {
+  background: $white;
+}
+
+footer {
+  background-color: $oxford-blue;
+  color: $white;
+}
+
+footer a {
+  color: $white;
+}
