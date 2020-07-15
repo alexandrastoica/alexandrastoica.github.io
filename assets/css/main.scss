@@ -22,13 +22,6 @@ a:focus {
   text-decoration: underline;
 }
 
-@media screen and (max-width: $mobile) {
-  iframe.desktop {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 main {
   width: 100%;
   box-sizing: border-box;
