@@ -7,6 +7,28 @@ app-home {
   display: block;
 }
 
+ol, ul, dl {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: $mobile) {
+  iframe.desktop {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 main {
   width: 100%;
   box-sizing: border-box;
@@ -116,6 +138,7 @@ dt:not(:first-child) {
 .pill-button:hover {
   background-color: #0e17da;
   box-shadow: 0rem 0.2rem 0rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 
 .pill-button span {

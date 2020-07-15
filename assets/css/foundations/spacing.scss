@@ -1,7 +1,8 @@
 body,
 dl,
 dd,
-.article--image p {
+.article--image p,
+figure {
   margin: 0;
 }
 
@@ -94,10 +95,11 @@ aside {
   flex: 1;
 }
 
-.article > *,
+.article--body,
 .profile--body,
 .awards {
   max-width: $text-width;
+  width: 100%;
 }
 
 .article video {
