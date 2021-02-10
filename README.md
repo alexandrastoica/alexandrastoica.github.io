@@ -18,6 +18,12 @@
     nvm use
     ```
 
+    Install dependencies
+
+    ```shell
+    npm i
+    ```
+
     Navigate into the project directory and start it up.
 
     ```shell
