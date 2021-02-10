@@ -8,19 +8,34 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        fonts: [
-          {
-            family: `Work sans`,
-            subsets: [`400`, `500`, `600`],
-          },
-          {
-            family: `Open Sans`,
-            variants: [`400`, `600`, `700`],
-          },
-        ],
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.js'),
+        },
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: 'articles',
+      },
+    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Work sans`,
+    //         subsets: [`400`, `500`, `600`],
+    //       },
+    //       {
+    //         family: `Open Sans`,
+    //         variants: [`400`, `600`, `700`],
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 };
