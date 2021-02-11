@@ -7,12 +7,15 @@ module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
           default: require.resolve('./src/components/layout.js'),
         },
+        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
       },
     },
     {
@@ -22,20 +25,12 @@ module.exports = {
         path: 'articles',
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Work sans`,
-    //         subsets: [`400`, `500`, `600`],
-    //       },
-    //       {
-    //         family: `Open Sans`,
-    //         variants: [`400`, `600`, `700`],
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Work sans`, `Open sans\:300,400,700`],
+        display: 'swap',
+      },
+    },
   ],
 };
