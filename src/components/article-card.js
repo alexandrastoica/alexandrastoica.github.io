@@ -41,7 +41,7 @@ const ArticleCardWrapper = styled('div')`
   justify-content: space-between;
 `;
 
-const ArticleCard = ({ label, title, description, link }) => (
+const ArticleCard = ({ article }) => (
   <ArticleCardWrapper>
     <ArticleCardCorner />
     <div
@@ -57,11 +57,11 @@ const ArticleCard = ({ label, title, description, link }) => (
         }
       `}
     >
-      {label}
+      {article.label}
     </div>
-    <h3>{title}</h3>
-    <p>{description}</p>
-    <ArticleCardCTA to={link}>&rarr;</ArticleCardCTA>
+    <h3>{article.title}</h3>
+    <p>{article.preview}</p>
+    <ArticleCardCTA to={`articles/${article.slug}`}>&rarr;</ArticleCardCTA>
   </ArticleCardWrapper>
 );
 
