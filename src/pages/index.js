@@ -17,13 +17,6 @@ export default function Home() {
       {articles.map((article) => (
         <ArticleCard key={article.slug} article={article} />
       ))}
-
-      {/* <ArticleCard
-        label="label"
-        title="hello"
-        description="from the card component"
-        link="/article/1"
-      ></ArticleCard> */}
     </Layout>
   );
 }
