@@ -8,8 +8,13 @@ const useArticles = () => {
           frontmatter {
             title
             slug
+            label
+            preview
+            links
+            languages
+            context
+            date
           }
-          excerpt
         }
       }
     }
@@ -18,7 +23,12 @@ const useArticles = () => {
   return data.allMdx.nodes.map((article) => ({
     title: article.frontmatter.title,
     slug: article.frontmatter.slug,
-    excerpt: article.excerpt,
+    label: article.frontmatter.label,
+    preview: article.frontmatter.preview,
+    links: article.frontmatter.links,
+    languages: article.frontmatter.languages,
+    context: article.frontmatter.context,
+    date: article.frontmatter.date,
   }));
 };
 
