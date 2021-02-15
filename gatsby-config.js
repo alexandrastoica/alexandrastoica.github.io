@@ -26,9 +26,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [`Work sans`, `Open sans\:300,400,700`],
+        fonts: ['Work sans', 'Open sans:300,400,500,600', 'material icons'],
         display: 'swap',
       },
     },
