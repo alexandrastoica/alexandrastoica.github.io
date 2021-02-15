@@ -19,6 +19,7 @@ const Layout = ({ children }) => {
           }
           html,
           body {
+            font-family: Open sans, sans-serif;
             margin: 0;
           }
           h1,
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
           h4,
           h5,
           h6 {
+            font-family: Work sans, sans-serif;
             line-height: 1.1;
             + * {
               margin-top: 0.5rem;
@@ -35,17 +37,32 @@ const Layout = ({ children }) => {
           strong {
             color: #222;
           }
-          li {
-            margin-top: 025rem;
+          .material-icons {
+            font-family: 'Material Icons';
+            font-size: 24px;
           }
         `}
       />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
-        <meta name="description" content={description}></meta>
+        <meta property="og:site_name" content={title} />
+        <meta property="og:type" content="website" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="http://alexandrastoica.co.uk/" />
+        <meta
+          property="og:image"
+          content="http://alexandrastoica.co.uk/assets/img/social/alexandrastoica.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="675" />
+        <meta property="og:locale" content="en" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
       </Helmet>
-      <header>Hello</header>
       <main>{children}</main>
     </>
   );
