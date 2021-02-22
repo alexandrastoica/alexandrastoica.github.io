@@ -19,27 +19,50 @@ const Layout = ({ children }) => {
           }
           html,
           body {
-            font-family: Open sans, sans-serif;
             margin: 0;
+          }
+          body,
+          p,
+          li {
+            color: #253237;
+            font: 400 1.125rem/2rem Open Sans, sans-serif;
           }
           h1,
           h2,
           h3,
-          h4,
-          h5,
-          h6 {
-            font-family: Work sans, sans-serif;
-            line-height: 1.1;
-            + * {
-              margin-top: 0.5rem;
-            }
+          h4 {
+            letter-spacing: -0.055rem;
           }
-          strong {
-            color: #222;
+
+          h1 {
+            font: 700 3.2rem/4rem Work Sans, sans-serif;
+          }
+
+          h2 {
+            font: 500 2.5rem/3rem Work Sans, sans-serif;
+          }
+
+          h3 {
+            font: 500 2rem/2.5rem Work Sans, sans-serif;
+          }
+
+          h4 {
+            color: #42555d;
+            font: 400 1.5rem/2rem Work Sans, sans-serif;
           }
           .material-icons {
             font-family: 'Material Icons';
             font-size: 24px;
+          }
+          a {
+            color: #1d27ff;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            &:active,
+            &:focus,
+            &:hover {
+              text-decoration: underline;
+            }
           }
         `}
       />
@@ -63,7 +86,7 @@ const Layout = ({ children }) => {
         <meta property="og:locale" content="en" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
       </Helmet>
-      <main>{children}</main>
+      <>{children}</>
     </>
   );
 };
