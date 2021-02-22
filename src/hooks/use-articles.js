@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const useArticles = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx {
+      allMdx(sort: { order: DESC, fields: [frontmatter___order] }) {
         nodes {
           frontmatter {
             title
@@ -14,6 +14,7 @@ const useArticles = () => {
             languages
             context
             date
+            order
           }
         }
       }
@@ -29,6 +30,7 @@ const useArticles = () => {
     languages: article.frontmatter.languages,
     context: article.frontmatter.context,
     date: article.frontmatter.date,
+    order: article.frontmatter.order,
   }));
 };
 
