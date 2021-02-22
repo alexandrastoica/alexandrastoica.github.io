@@ -6,18 +6,25 @@ import useArticles from '../hooks/use-articles';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
+const ArticlesWrapper = styled('ul')`
+  display: grid;
+  gap: 64px 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`;
+
 const CardWrapper = styled('li')`
-  position: relative;
-  text-align: left;
   background-color: #fff;
-  padding: 32px;
   border-radius: 2px;
+  padding: 32px;
   transform: translateY(0);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 `;
 
 export default function Home() {
@@ -25,26 +32,40 @@ export default function Home() {
 
   return (
     <Layout>
-      <Header
-        title="Alexandra Stoica"
-        description="UX/Frontend Enginner @Potato London. MSc Human-Computer Interaction (Distinction) at UCL, London, UK. BSc Web Development (1:1 Hons) at WorcUni, UK. Interested in all things frontend and human-computer interaction. 🧠👩🏻‍💻"
-      ></Header>
-
-      <ul
+      <div
         css={css`
-          display: grid;
-          gap: 64px 32px;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          padding: 0;
-          margin: 0;
+          padding: 64px;
+          background: #e8fafd;
         `}
       >
-        {articles.map((article, i) => (
-          <CardWrapper key={i}>
-            <ArticleCard article={article} />
-          </CardWrapper>
-        ))}
-      </ul>
+        <Header>
+          <h1>Alexandra Stoica</h1>
+          <p>
+            UX/Frontend Enginner{' '}
+            <a href="https://p.ota.to/" target="_blank" rel="noreferrer">
+              @Potato London
+            </a>
+            . MSc Human-Computer Interaction (Distinction) at UCL, London, UK.
+            BSc Web Development (1:1 Hons) at WorcUni, UK. Interested in all
+            things frontend and human-computer interaction.{' '}
+            <span role="img" aria-label="">
+              🧠
+            </span>
+            <span role="img" aria-label="">
+              👩🏻‍💻
+            </span>
+          </p>
+        </Header>
+        <main>
+          <ArticlesWrapper>
+            {articles.map((article) => (
+              <CardWrapper key={article.order}>
+                <ArticleCard article={article} />
+              </CardWrapper>
+            ))}
+          </ArticlesWrapper>
+        </main>
+      </div>
     </Layout>
   );
 }
