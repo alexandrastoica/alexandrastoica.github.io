@@ -1,24 +1,16 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
-const HeaderBody = styled('div')`
+const HeaderBody = styled('header')`
   margin: 0 auto;
   max-width: 1280px;
   padding: 88px 0;
+
+  p {
+    max-width: 760px;
+  }
 `;
 
-const Header = ({ title, description }) => (
-  <HeaderBody>
-    <h1>{title}</h1>
-    <p
-      css={css`
-        max-width: 760px;
-      `}
-    >
-      {description}
-    </p>
-  </HeaderBody>
-);
+const Header = ({ children }) => <HeaderBody>{children}</HeaderBody>;
 
 export default Header;
