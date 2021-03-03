@@ -2,6 +2,7 @@ import React from 'react';
 import { Global, css } from '@emotion/react';
 import Helmet from 'react-helmet';
 import useSiteMetadata from '../hooks/use-sitemetadata';
+import Footer from './footer';
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -19,12 +20,12 @@ const Layout = ({ children }) => {
           }
           html,
           body {
+            color: #253237;
             margin: 0;
           }
           body,
           p,
           li {
-            color: #253237;
             font: 400 1.125rem/2rem Open Sans, sans-serif;
           }
           h1,
@@ -47,7 +48,6 @@ const Layout = ({ children }) => {
           }
 
           h4 {
-            color: #42555d;
             font: 400 1.5rem/2rem Work Sans, sans-serif;
           }
           .material-icons {
@@ -87,6 +87,29 @@ const Layout = ({ children }) => {
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
       </Helmet>
       <>{children}</>
+      <Footer>
+        <section className="footer-info">
+          <div>
+            <h4>About</h4>
+            <p>Alexandra Stoica is a London-based Frontend/UX Engineer.</p>
+          </div>
+          <div>
+            <h4>Enquiries</h4>
+            <p>ralexandrastoica@gmail.com</p>
+          </div>
+          <div>
+            <h4>Find me on...</h4>
+            <ul>
+              <li>Linkedin</li>
+              <li>Github</li>
+              <li>Twitter</li>
+            </ul>
+          </div>
+        </section>
+        <section className="footer-line">
+          <p>© 2021 Alexandra Stoica</p>
+        </section>
+      </Footer>
     </>
   );
 };
