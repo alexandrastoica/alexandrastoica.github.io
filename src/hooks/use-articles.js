@@ -11,7 +11,7 @@ const useArticles = () => {
             label
             preview
             links
-            languages
+            keywords
             context
             date
             order
@@ -27,7 +27,7 @@ const useArticles = () => {
     label: article.frontmatter.label,
     preview: article.frontmatter.preview,
     links: article.frontmatter.links,
-    languages: article.frontmatter.languages,
+    keywords: article.frontmatter.keywords,
     context: article.frontmatter.context,
     date: article.frontmatter.date,
     order: article.frontmatter.order,

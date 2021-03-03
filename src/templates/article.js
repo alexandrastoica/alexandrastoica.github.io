@@ -15,7 +15,7 @@ export const query = graphql`
         date
         links
         context
-        languages
+        keywords
       }
       body
     }
