@@ -54,6 +54,10 @@ const ArticleCardWrapper = styled('div')`
   justify-content: space-between;
   overflow: hidden;
   text-align: left;
+
+  p {
+    font: 400 1rem/1.5rem Open Sans, sans-serif;
+  }
 `;
 
 const ArticleCard = ({ article }) => (

@@ -13,21 +13,22 @@ const Layout = ({ children }) => {
         styles={css`
           * {
             box-sizing: border-box;
-            margin: 0;
           }
-          * + * {
-            margin-top: 1rem;
-          }
+
           html,
           body {
             color: #253237;
             margin: 0;
           }
-          body,
-          p,
-          li {
+
+          body {
             font: 400 1.125rem/2rem Open Sans, sans-serif;
           }
+
+          li {
+            margin: 0;
+          }
+
           h1,
           h2,
           h3,
@@ -50,10 +51,12 @@ const Layout = ({ children }) => {
           h4 {
             font: 400 1.5rem/2rem Work Sans, sans-serif;
           }
+
           .material-icons {
-            font-family: 'Material Icons';
-            font-size: 24px;
+            font-family: Material Icons, sans-serif;
+            font-size: 16px;
           }
+
           a {
             color: #1d27ff;
             text-decoration: none;

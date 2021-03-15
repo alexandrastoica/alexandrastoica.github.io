@@ -7,7 +7,7 @@ const SidebarBody = styled('aside')`
   box-sizing: border-box;
   flex: 0 0 360px;
   max-width: 360px;
-  padding: 88px 32px 88px 0;
+  padding: 64px 32px 64px 0;
 `;
 
 const List = styled(`dl`)`
@@ -24,8 +24,13 @@ const List = styled(`dl`)`
     }
   }
 
+  dt + dt {
+    margin-top: 24px;
+  }
+
   dd {
     font: 400 1rem/1.5rem Open Sans, sans-serif;
+    margin: 24px 0;
   }
 `;
 
@@ -34,9 +39,8 @@ const Tag = styled('dd')`
   border: 1px solid;
   float: left;
   font: 400 0.725rem/1rem Open Sans, sans-serif !important;
-  margin-right: 8px;
+  margin: 24px 8px 8px 0 !important;
   padding: 4px 8px;
-  width: fit-content;
 `;
 
 const FillIcon = styled('span')`

@@ -4,10 +4,11 @@ import { Link } from 'gatsby';
 
 const BreadcrumbWrapper = styled('nav')`
   background: #fdf6f3;
+  padding: 32px 0 16px;
   position: sticky;
-  z-index: 1;
-  width: 100%;
   top: 0;
+  width: 100%;
+  z-index: 1;
 `;
 
 const BreadcrumbBody = styled('ul')`
@@ -15,17 +16,24 @@ const BreadcrumbBody = styled('ul')`
   display: flex;
   list-style: none;
   margin: 0 88px;
-  padding: 32px 0 16px;
+  padding: 0;
 
   li {
-    font: 500 11px/11px Open Sans, sans-serif;
+    font: 400 0.8125rem/2rem Open Sans, sans-serif;
     letter-spacing: 1px;
-    line-height: 2rem;
     margin-top: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
     text-transform: uppercase;
-    white-space: nowrap;
+    align-items: center;
+
+    & > * {
+      vertical-align: middle;
+    }
+
+    &:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   .material-icons {
@@ -54,9 +62,14 @@ const Breadcrumb = ({ title }) => (
     <BreadcrumbBody>
       <li>
         <HomeLink to="/">Alexandra Stoica</HomeLink>
-        <span className="material-icons md-18">chevron_right</span>
       </li>
-      <li>{title}</li>
+      <li>
+        {' '}
+        <span className="material-icons md-18" role="img">
+          chevron_right
+        </span>
+        {title}
+      </li>
     </BreadcrumbBody>
   </BreadcrumbWrapper>
 );

@@ -33,11 +33,8 @@ const FlexLayout = styled('div')`
 const ArticleBody = styled('article')`
   position: relative;
   background: #fff;
-  padding-bottom: 88px;
-  padding-top: 88px;
-  box-sizing: border-box;
   flex: 1;
-  padding: 88px 64px;
+  padding: 64px;
   margin: 0 auto;
 
   h1 + p {
@@ -47,6 +44,10 @@ const ArticleBody = styled('article')`
 
   h2 {
     margin: 56px 0 32px;
+  }
+
+  li {
+    margin: 24px 0;
   }
 `;
 
