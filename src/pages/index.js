@@ -5,6 +5,7 @@ import Header from '../components/header';
 import useArticles from '../hooks/use-articles';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { Social } from '../components/social';
 
 const ArticlesWrapper = styled('ul')`
   display: grid;
@@ -55,8 +56,10 @@ export default function Home() {
               👩🏻‍💻
             </span>
           </p>
+          <Social />
         </Header>
         <main>
+          <h2>Work</h2>
           <ArticlesWrapper>
             {articles.map((article) => (
               <CardWrapper key={article.order}>
