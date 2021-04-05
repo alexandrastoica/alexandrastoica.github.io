@@ -19,7 +19,7 @@ const List = styled(`dl`)`
     padding-top: 32px;
     text-transform: uppercase;
 
-    &:first-child {
+    &:first-of-type {
       border: none;
     }
   }
