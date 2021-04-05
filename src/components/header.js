@@ -1,13 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { breakpoints, dimensions, spacing } from './theme';
 
 const HeaderBody = styled('header')`
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 88px 0;
+  max-width: ${dimensions.MAX_TEXT_WIDTH};
+  padding: ${spacing.XL} 0;
+  width: 100%;
 
-  p {
-    max-width: 760px;
+  h1 {
+    margin: 0;
+  }
+
+  @media screen and (max-width: ${breakpoints.TABLET}) {
+    padding: ${spacing.L} 0;
+  }
+
+  @media screen and (max-width: ${breakpoints.MOBILE}) {
+    padding: ${spacing.M} 0;
   }
 `;
 

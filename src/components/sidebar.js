@@ -1,22 +1,30 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import SidebarButton from './sidebar-button';
+import { spacing, type } from './theme';
 
 const SidebarBody = styled('aside')`
   background: #fdf6f3;
   box-sizing: border-box;
   flex: 0 0 360px;
-  max-width: 360px;
-  padding: 64px 32px 64px 0;
+  padding: ${spacing.L} ${spacing.M} ${spacing.L} 0;
+
+  @media screen and (max-width: 1015px) {
+    flex: 100%;
+    padding: ${spacing.L};
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: ${spacing.M};
+  }
 `;
 
 const List = styled(`dl`)`
   dt {
     border-top: 0.5px solid rgba(0, 0, 0, 0.06);
-    font: 600 0.875rem/1.125rem Open Sans, sans-serif;
+    font: 600 0.875rem/1.125rem ${type.BODY_FONT};
     letter-spacing: 1px;
-    letter-spacing: 1px;
-    padding-top: 32px;
+    padding-top: ${spacing.M};
     text-transform: uppercase;
 
     &:first-of-type {
@@ -25,22 +33,22 @@ const List = styled(`dl`)`
   }
 
   dt + dt {
-    margin-top: 24px;
+    margin-top: ${spacing.S};
   }
 
   dd {
-    font: 400 1rem/1.5rem Open Sans, sans-serif;
-    margin: 24px 0;
+    font: 400 1rem/1.5rem ${type.BODY_FONT};
+    margin: ${spacing.S} 0;
   }
 `;
 
 const Tag = styled('dd')`
-  border-radius: 8px;
+  border-radius: ${spacing.XXS};
   border: 1px solid;
   float: left;
-  font: 400 0.725rem/1rem Open Sans, sans-serif !important;
-  margin: 24px 8px 8px 0 !important;
-  padding: 4px 8px;
+  font: 400 0.725rem/1rem ${type.BODY_FONT} !important;
+  margin: ${spacing.S} ${spacing.XXS} ${spacing.XXS} 0 !important;
+  padding: 4px ${spacing.XXS};
 `;
 
 const FillIcon = styled('span')`
@@ -48,8 +56,8 @@ const FillIcon = styled('span')`
   border-radius: 100px;
   font-size: 28px;
   line-height: 1;
-  margin-right: 8px;
-  padding: 10px;
+  margin-right: ${spacing.XXS};
+  padding: ${spacing.XS};
   vertical-align: middle;
 `;
 

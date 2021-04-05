@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { spacing, type } from './theme';
 
 const Button = styled('a')`
   align-items: center;
-  background-color: #1d27ff;
-  border-radius: 24px;
+  background: #1d27ff;
+  border-radius: ${spacing.S};
   box-shadow: 0 0.125rem 0 rgb(0 0 0 / 20%);
-  color: #fff;
-  cursor: pointer;
+  color: white;
   display: flex;
-  font: 500 1rem/1.5rem Open Sans, sans-serif;
+  font: 500 1rem/1.5rem ${type.BODY_FONT};
   justify-content: center;
   letter-spacing: 1px;
   min-height: 3rem;
@@ -20,7 +20,7 @@ const Button = styled('a')`
   width: fit-content;
 
   span {
-    margin-right: 8px;
+    margin-right: ${spacing.XXS};
   }
 
   &:active,

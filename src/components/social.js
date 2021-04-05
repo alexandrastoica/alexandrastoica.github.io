@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { breakpoints, spacing } from './theme';
 
 const SocialBody = styled('div')`
   display: flex;
   justify-content: space-between;
-  margin: 24px 0;
-  width: 25%;
+  margin: ${spacing.S} 0;
+  width: 50%;
 
   a.icon:hover {
     transform: translateY(-5px);
@@ -13,6 +14,10 @@ const SocialBody = styled('div')`
 
   .icon svg {
     height: 24px;
+  }
+
+  @media screen and (max-width: ${breakpoints.MOBILE}) {
+    width: 100%;
   }
 `;
 

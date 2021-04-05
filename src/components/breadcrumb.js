@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
+import { spacing, type } from './theme';
 
 const BreadcrumbWrapper = styled('nav')`
   background: #fdf6f3;
-  padding: 32px 0 16px;
+  padding: ${spacing.M} 0 ${spacing.XS};
   position: sticky;
   top: 0;
   width: 100%;
@@ -15,11 +16,11 @@ const BreadcrumbBody = styled('ul')`
   align-items: center;
   display: flex;
   list-style: none;
-  margin: 0 88px;
+  margin: 0 ${spacing.XL};
   padding: 0;
 
   li {
-    font: 400 0.8125rem/2rem Open Sans, sans-serif;
+    font: 400 0.8125rem/2rem ${type.BODY_FONT};
     letter-spacing: 1px;
     margin-top: 0;
     text-transform: uppercase;
@@ -37,13 +38,13 @@ const BreadcrumbBody = styled('ul')`
   }
 
   .material-icons {
-    margin: 0 24px;
+    margin: 0 ${spacing.S};
   }
 `;
 
 const HomeLink = styled(Link)`
   color: #1d27ff;
-  font: 600 1.5rem/1.6875rem Open Sans, sans-serif;
+  font: 600 1.5rem/1.6875rem ${type.BODY_FONT};
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
