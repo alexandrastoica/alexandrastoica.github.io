@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import SidebarButton from './sidebar-button';
 import { spacing, type } from './theme';
+import { css } from '@emotion/react';
 
 const SidebarBody = styled('aside')`
   background: #fdf6f3;
@@ -47,7 +48,7 @@ const Tag = styled('dd')`
   border: 1px solid;
   float: left;
   font: 400 0.725rem/1rem ${type.BODY_FONT} !important;
-  margin: ${spacing.S} ${spacing.XXS} ${spacing.XXS} 0 !important;
+  margin: ${spacing.XXS} ${spacing.XXS} 0 0 !important;
   padding: 4px ${spacing.XXS};
 `;
 
@@ -93,7 +94,13 @@ class Sidebar extends React.Component {
             </dd>
           ))}
 
-          <dt>Keywords</dt>
+          <dt
+            css={css`
+              margin-bottom: ${spacing.XS};
+            `}
+          >
+            Keywords
+          </dt>
           {keywords.map((lang, i) => (
             <Tag key={i}>{lang}</Tag>
           ))}
