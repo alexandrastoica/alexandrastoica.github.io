@@ -40,11 +40,14 @@ const BreadcrumbBody = styled('ul')`
   .material-icons {
     margin: 0 ${spacing.S};
   }
+
+  @media screen and (max-width: 700px) {
+    margin: 0 ${spacing.M};
+  }
 `;
 
 const HomeLink = styled(Link)`
-  color: #1d27ff;
-  font: 600 1.5rem/1.6875rem ${type.BODY_FONT};
+  font: 600 1.5rem/2rem ${type.BODY_FONT};
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;

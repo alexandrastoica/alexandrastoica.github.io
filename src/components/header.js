@@ -7,10 +7,6 @@ const HeaderBody = styled('header')`
   padding: ${spacing.XL} 0;
   width: 100%;
 
-  h1 {
-    margin: 0;
-  }
-
   @media screen and (max-width: ${breakpoints.TABLET}) {
     padding: ${spacing.L} 0;
   }

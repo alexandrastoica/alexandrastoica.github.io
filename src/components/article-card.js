@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import { spacing, type } from './theme';
+import { dimensions, spacing, type } from './theme';
 
 const ArticleCardCorner = styled('span')`
   background: linear-gradient(to bottom left, #e8fafd 50%, #001e49 0);
-  height: 64px;
+  height: ${dimensions.CORNER_HEIGHT};
   position: absolute;
   right: 0;
   top: 0;
-  width: 64px;
+  width: ${dimensions.CORNER_WIDTH};
   z-index: 1;
 `;
 

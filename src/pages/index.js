@@ -11,10 +11,17 @@ import { breakpoints, colors, dimensions, spacing } from '../components/theme';
 const ArticlesWrapper = styled('ul')`
   display: grid;
   gap: ${spacing.L} ${spacing.M};
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(${dimensions.MAX_CARD_WIDTH}, 1fr)
+  );
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: ${breakpoints.MOBILE}) {
+    gap: ${spacing.M} ${spacing.S};
+  }
 `;
 
 const CardWrapper = styled('li')`
@@ -31,6 +38,19 @@ const CardWrapper = styled('li')`
 
 const FlexLayout = styled('div')`
   display: flex;
+  align-items: center;
+
+  ul {
+    max-width: ${dimensions.MAX_TEXT_WIDTH};
+  }
+
+  .image {
+    margin-left: ${spacing.L};
+
+    @media screen and (max-width: ${breakpoints.TABLET}) {
+      display: none;
+    }
+  }
 
   img {
     max-width: 100%;
@@ -88,7 +108,15 @@ export default function Home() {
               ))}
             </ArticlesWrapper>
           </section>
-          <section>
+          <section
+            css={css`
+              padding: ${spacing.XL} 0;
+
+              @media screen and (max-width: ${breakpoints.TABLET}) {
+                padding: ${spacing.L} 0;
+              }
+            `}
+          >
             <h2>Leadership and awards</h2>
             <FlexLayout>
               <ul>
@@ -133,7 +161,7 @@ export default function Home() {
                   of undergraduate studies
                 </li>
               </ul>
-              <div>
+              <div className="image">
                 <img src="awards.svg" alt=""></img>
               </div>
             </FlexLayout>

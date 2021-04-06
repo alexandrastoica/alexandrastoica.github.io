@@ -46,6 +46,7 @@ const Layout = ({ children }) => {
 
           h1 {
             font: 700 3.2rem/4rem ${type.HEADLINE_FONT};
+            margin-top: 0;
           }
 
           h2 {

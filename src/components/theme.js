@@ -1,5 +1,8 @@
 export const dimensions = {
+  CORNER_HEIGHT: '48px',
+  CORNER_WIDTH: '48px',
   MAX_BODY_WIDTH: '1500px',
+  MAX_CARD_WIDTH: '320px',
   MAX_TEXT_WIDTH: '760px',
 };
 

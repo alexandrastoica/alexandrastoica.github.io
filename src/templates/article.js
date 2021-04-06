@@ -58,17 +58,17 @@ const ArticleBody = styled('article')`
   }
 
   @media screen and (max-width: 700px) {
-    padding: ${spacing.M};
+    padding: ${spacing.L} ${spacing.M};
   }
 `;
 
 const ArticleBodyCorner = styled('span')`
   background: linear-gradient(to top left, #001e49 50%, #fdf6f3 0);
-  height: 64px;
+  height: ${dimensions.CORNER_HEIGHT};
   left: 0;
   position: absolute;
   top: 0;
-  width: 64px;
+  width: ${dimensions.CORNER_WIDTH};
 `;
 
 const ArticleTemplate = ({ data: { mdx: article } }) => (
