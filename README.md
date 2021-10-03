@@ -1,4 +1,4 @@
-# alexandrastoica.co.uk v2
+# alexandrastoica.co.uk
 
 [alexandrastoica.co.uk](https://alexandrastoica.co.uk) built with Gatsby
 
