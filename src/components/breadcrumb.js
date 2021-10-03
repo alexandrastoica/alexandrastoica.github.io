@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import { spacing, type } from './theme';
+import { colors, spacing, type } from './theme';
 
 const BreadcrumbWrapper = styled('nav')`
-  background: #fdf6f3;
+  background: ${colors.ARTICLE_BG};
   padding: ${spacing.M} 0 ${spacing.XS};
   position: sticky;
   top: 0;

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { spacing, type } from './theme';
+import { colors, spacing, type } from './theme';
 
 const Button = styled('a')`
   align-items: center;
-  background: #1d27ff;
+  background: ${colors.ACTION};
   border-radius: ${spacing.S};
   box-shadow: 0 0.125rem 0 rgb(0 0 0 / 20%);
   color: white;
@@ -26,7 +26,7 @@ const Button = styled('a')`
   &:active,
   &:focus,
   &:hover {
-    background: #0e17da;
+    background: #0e17da; // FOCUS BUTTON COLOR
     box-shadow: 0 0.2rem 0 rgb(0 0 0 / 20%);
     text-decoration: none;
   }

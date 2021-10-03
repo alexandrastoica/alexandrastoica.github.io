@@ -37,23 +37,19 @@ const CardWrapper = styled('li')`
 `;
 
 const FlexLayout = styled('div')`
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(${dimensions.MAX_CARD_WIDTH}, 1fr)
+  );
 
   ul {
-    max-width: ${dimensions.MAX_TEXT_WIDTH};
+    margin: 0;
+    padding: 0 ${spacing.M} 0 ${spacing.S};
   }
 
-  .image {
-    margin-left: ${spacing.L};
-
-    @media screen and (max-width: ${breakpoints.TABLET}) {
-      display: none;
-    }
-  }
-
-  img {
-    max-width: 100%;
+  li {
+    margin-bottom: ${spacing.S};
   }
 `;
 
@@ -87,7 +83,7 @@ export default function Home() {
             </a>
             . MSc Human-Computer Interaction (Distinction) at UCL, London, UK.
             BSc Web Development (1:1 Hons) at WorcUni, UK. Interested in all
-            things frontend and human-computer interaction.{' '}
+            things frontend, accessibility, and human-computer interaction.{' '}
             <span role="img" aria-label="">
               🧠
             </span>
@@ -121,8 +117,15 @@ export default function Home() {
             <FlexLayout>
               <ul>
                 <li>
-                  2020: Leader of the Accessibility Guild at Potato, an
-                  initiative created to promote and increase awareness for
+                  2020: Leader of the{' '}
+                  <a
+                    href="https://dev.p.ota.to/post/why-accessibility-should-be-a-priority-not-an-afterthought-4fvemfvgd83/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Accessibility Guild at Potato
+                  </a>
+                  , an initiative created to promote and increase awareness for
                   inclusive and accessible products
                 </li>
                 <li>
@@ -150,6 +153,8 @@ export default function Home() {
                     best use of blockchain technology
                   </a>
                 </li>
+              </ul>
+              <ul>
                 <li>
                   2017: Best Computing Student 2017 awarded by the British
                   Computer Society for achieving the highest overall grade in my
@@ -161,9 +166,6 @@ export default function Home() {
                   of undergraduate studies
                 </li>
               </ul>
-              <div className="image">
-                <img src="awards.svg" alt=""></img>
-              </div>
             </FlexLayout>
           </section>
         </main>

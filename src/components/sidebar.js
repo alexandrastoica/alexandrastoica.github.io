@@ -53,7 +53,7 @@ const Tag = styled('dd')`
 `;
 
 const FillIcon = styled('span')`
-  background: #fff;
+  background: white;
   border-radius: 100px;
   font-size: 28px;
   line-height: 1;
@@ -82,25 +82,28 @@ class Sidebar extends React.Component {
           <dt>Date</dt>
           <dd>{date}</dd>
 
-          <dt>Context</dt>
+          {context && <dt>Context</dt>}
           {context.map((cont, i) => (
             <dd key={i}>{cont}</dd>
           ))}
 
-          <dt>Links</dt>
-          {links.map((link, i) => (
-            <dd key={i}>
-              <SidebarButton link={link}></SidebarButton>
-            </dd>
-          ))}
+          {links && <dt>Links</dt>}
+          {links &&
+            links.map((link, i) => (
+              <dd key={i}>
+                <SidebarButton link={link}></SidebarButton>
+              </dd>
+            ))}
 
-          <dt
-            css={css`
-              margin-bottom: ${spacing.XS};
-            `}
-          >
-            Keywords
-          </dt>
+          {keywords && (
+            <dt
+              css={css`
+                margin-bottom: ${spacing.XS};
+              `}
+            >
+              Keywords
+            </dt>
+          )}
           {keywords.map((lang, i) => (
             <Tag key={i}>{lang}</Tag>
           ))}

@@ -5,7 +5,9 @@ import useSiteMetadata from '../hooks/use-sitemetadata';
 import Footer from './footer';
 import { colors, type, breakpoints } from './theme';
 
-const Layout = ({ children }) => {
+import ogImage from '../../static/alexandrastoica.png';
+
+const Layout = ({ footer = true, children }) => {
   const { title, description } = useSiteMetadata();
 
   return (
@@ -21,10 +23,15 @@ const Layout = ({ children }) => {
             background: ${colors.HOME_BG};
             color: ${colors.NEUTRAL};
             margin: 0;
+            height: 100%;
           }
-
+          
           body {
             font: 400 1.125rem/2rem ${type.BODY_FONT};
+          }
+
+          main {
+            min-height: 100%;
           }
 
           ol,
@@ -127,39 +134,74 @@ const Layout = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="http://alexandrastoica.co.uk/" />
-        <meta
-          property="og:image"
-          content="http://alexandrastoica.co.uk/assets/img/social/alexandrastoica.png"
-        />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="675" />
         <meta property="og:locale" content="en" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
       </Helmet>
       <>{children}</>
-      <Footer>
+      {footer && <Footer>
         <section className="footer-info">
           <div>
             <h4>About</h4>
-            <p>Alexandra Stoica is a London-based Frontend/UX Engineer.</p>
+            <p>
+              Alexandra is a London-based UX/Frontend Engineer passionate about
+              accessibility and human-computer interaction.
+            </p>
           </div>
           <div>
             <h4>Enquiries</h4>
-            <p>ralexandrastoica@gmail.com</p>
+            <p>
+              <a
+                href="mailto:ralexandrastoica@gmail.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                ralexandrastoica@gmail.com
+              </a>
+            </p>
           </div>
           <div>
             <h4>Find me on...</h4>
             <ul>
-              <li>Linkedin</li>
-              <li>Github</li>
-              <li>Twitter</li>
+              <li>
+                {' '}
+                <a
+                  href="https://uk.linkedin.com/in/alexandrastoica"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Linkedin
+                </a>
+              </li>
+              <li>
+                {' '}
+                <a
+                  href="https://github.com/alexandrastoica"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Github
+                </a>
+              </li>
+              <li>
+                {' '}
+                <a
+                  href="https://twitter.com/alexandrasto_"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Twitter
+                </a>
+              </li>
             </ul>
           </div>
         </section>
         <section className="footer-line">
-          <p>© 2021 Alexandra Stoica</p>
+          <p>&copy; {new Date().getFullYear()} Alexandra Stoica</p>
         </section>
-      </Footer>
+      </Footer>}
     </>
   );
 };

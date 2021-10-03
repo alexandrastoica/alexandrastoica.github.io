@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import { dimensions, spacing, type } from './theme';
+import { colors, dimensions, spacing, type } from './theme';
 
 const ArticleCardCorner = styled('span')`
-  background: linear-gradient(to bottom left, #e8fafd 50%, #001e49 0);
+  background: linear-gradient(
+    to bottom left,
+    ${colors.HOME_BG} 50%,
+    ${colors.DARK} 0
+  );
   height: ${dimensions.CORNER_HEIGHT};
   position: absolute;
   right: 0;
@@ -16,7 +20,7 @@ const ArticleCardCorner = styled('span')`
 const ArticleCardCTA = styled(Link)`
   align-self: flex-end;
   border-radius: ${spacing.XL};
-  border: 2px solid #1d27ff;
+  border: 2px solid ${colors.ACTION};
   box-sizing: border-box;
   height: 48px;
   line-height: 48px;
@@ -31,8 +35,8 @@ const ArticleCardCTA = styled(Link)`
   }
 
   &:hover {
-    background: #ffdb13;
-    border-color: #ffdb13;
+    background: ${colors.ACTION_HIGHLIGHT};
+    border-color: ${colors.ACTION_HIGHLIGHT};
 
     span {
       margin-left: ${spacing.M};
@@ -46,7 +50,7 @@ const ArticleCardLabel = styled('div')`
   text-transform: uppercase;
 
   &::after {
-    background: #ffdb13;
+    background: ${colors.ACTION_HIGHLIGHT};
     content: ' ';
     display: block;
     height: 2px;
@@ -76,7 +80,11 @@ const ArticleCard = ({ article }) => (
         <Link to={`articles/${article.slug}`}>{article.title}</Link>
       </h3>
       <p>{article.preview}</p>
-      <ArticleCardCTA to={`articles/${article.slug}`} aria-hidden="true">
+      <ArticleCardCTA
+        to={`articles/${article.slug}`}
+        aria-hidden="true"
+        tabIndex="-1"
+      >
         <span className="material-icons">arrow_forward</span>
       </ArticleCardCTA>
     </ArticleCardWrapper>
