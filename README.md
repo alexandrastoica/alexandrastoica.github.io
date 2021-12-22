@@ -1,6 +1,6 @@
-# alexandrastoica.co.uk
+# Personal portfolio
 
-[alexandrastoica.co.uk](https://alexandrastoica.co.uk) built with Gatsby
+[https://alexandrastoica.github.io/](https://alexandrastoica.github.io/) built with Gatsby
 
 ## 🚀 Quick start
 
